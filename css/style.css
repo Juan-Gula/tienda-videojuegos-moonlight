@@ -1,0 +1,275 @@
+/*Fuentes externas*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+/*Fuentes interas*/
+@font-face {
+    font-family: monserrat;
+    src: url(../assets/font/Montserrat-Thin.ttf);
+}
+body{
+    background-color: #243340;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    background-color: #2f3847;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+ul{
+    height: 100px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: #2f3847;
+    margin: 10px;
+}
+nav{
+    background-color: #2f3847;
+}
+#parrafo{
+    text-align: center;
+    border: solid black;
+    background-image: url("/assets/background/zero.png");
+    background-position: center;
+    background-size: 500px;
+    padding: 10px;
+    margin: 100px;
+    color: gray;
+}
+.ol{
+    list-style: lower-roman;
+}
+#img0{
+    margin: 10px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+}
+.section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.img1{
+    background-color: #2f3847;
+    width: 100px;
+    border: 4px solid #2f3847;
+    border-style: ridge;
+    margin: 10px;
+}
+/*Flexbox*/
+.caja{
+    /*Box Modeling*/
+    height: 100px;
+    width: 100px;
+    border: 1px solid gray;
+    margin: 10px;
+
+    /*Fonts*/
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 900;
+
+    /*Gradientes*/
+    /*background-image: linear-gradient(to left, black, white);*/
+    background-image: linear-gradient( 109.6deg,  rgba(24,138,141,1) 11.2%, rgba(96,221,142,1) 91.1% );
+}
+
+.flex-container{
+    /*Flexbox activado*/
+    display: flex;
+    /*Propiedades de Flex*/
+    /*Define el eje principal es decir de dónde empieza*/
+    flex-direction: row;
+    /*Hace que siga abajo si se queda sin espacio*/
+    flex-wrap: wrap;
+    /*eje principal*/
+    justify-content: center;
+    /*eje secundario*/
+    align-items: flex-start;
+}
+.flex-container-n{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flex-container-n > div{
+
+    color: whitesmoke;
+}
+
+.caja-n{
+
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid whitesmoke;
+
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.title-grid{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 25px;
+
+    color: whitesmoke;
+    margin: 10px;
+}
+.container{
+    width: 90%;
+    max-width: 1000px;
+    border: 5px solid black;
+    margin: auto;
+
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+
+    /*Activamos grid*/
+    display: grid;
+    /*defino la cantidad de columnas que va a tener mi grilla
+    Puede ser Fracciones (fr) Pixeles (px) o Porcentaje (%)*/
+    grid-template-columns: 1fr 1fr 1fr;
+    /*defino la cantidad de filas que va a tener mi grilla*/
+    grid-template-rows: 50px 50px 50px 50px;
+    column-gap: 5px;
+    row-gap: 10px;
+    /*eje horizontal: justify-items*/
+    /*eje vertical: align-items*/
+
+    /*Grid Áreas*/
+    grid-template-areas: 
+    "evento evento evento"
+    "imagen texto texto"
+    "imagen texto texto"
+    "imagen texto texto"
+    ;
+}
+
+/*divs que están directamente adentro del class container*/
+.container > div{
+    color: whitesmoke;
+    background-color:#2f3847;
+}
+
+/*Propiedades de los hijos GRIDS*/
+.box1{
+    justify-self: center; /*Eje Horizontal*/
+    align-self: flex-end; /*Eje Vertical*/
+}
+
+.container-c{
+    width: 90%;
+    border: 3px solid #243340;
+    margin: auto;
+
+    font-size: 30px;
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 256px 256px 256px 256px;
+    grid-template-rows: 320px 320px 320px 320px;
+    gap: 100px;
+    /*Áreas grid*/
+    grid-template-areas: 
+    "Imagén   Imagén   Imagén   Imagén"
+    ;
+}
+
+.box-c{
+    background-color: #243340;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.img-c{
+    border: solid 10px #2f3847;
+    cursor: pointer;
+    height: 300px;
+    width: 240px;
+    margin: 10px;
+    transition: height 2s, width 2s;
+
+    animation-name: imagen-animacion;
+    animation-iteration-count: 1s;
+    animation-duration: 2s;
+}
+.img-c2{
+    display: none;
+    position: absolute;
+    height: 300px;
+    width: 240px;
+    margin: 10px;
+}
+.img-c:hover{
+    height: 320px;
+    width: 256px;
+    display: inline;
+    cursor: pointer;
+}
+
+button {
+    padding: 1.3em 3em;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: black;
+    background-color:#fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+    
+button:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+button:active {
+    transform: translateY(-1px);
+}
+footer{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
+    background-color: #2f3847;
+    background-clip: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.footer{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    font-weight: 600;
+    text-align: center;
+}
+.img-f{
+    width: 15px;
+    height: 15px;
+}
