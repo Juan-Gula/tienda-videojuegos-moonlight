@@ -6,6 +6,7 @@
     src: url(../assets/font/Montserrat-Thin.ttf);
 }
 body{
+    font-family: 'Montserrat', sans-serif;
     background-color: #243340;
     color: whitesmoke;
     margin: 0;
@@ -18,12 +19,13 @@ h1{
     align-items: center;
     margin: 0;
     padding: 0;
+    border-right: solid 2px rgb(32, 32, 32);
 }
 a{
     color: whitesmoke;
     text-decoration: none;
 }
-ul{
+.menu{
     height: 100px;
     list-style: none;
     display: flex;
@@ -31,24 +33,15 @@ ul{
     justify-content: center;
     justify-content: space-around;
     background-color: #2f3847;
-    margin: 10px;
+    margin: 0;
+    border-bottom: solid 2px rgb(32, 32, 32);
+    border-right: solid 2px rgb(32, 32, 32);
+    padding: 0;
 }
 nav{
     background-color: #2f3847;
 }
-#parrafo{
-    text-align: center;
-    border: solid black;
-    background-image: url("/assets/background/zero.png");
-    background-position: center;
-    background-size: 500px;
-    padding: 10px;
-    margin: 100px;
-    color: gray;
-}
-.ol{
-    list-style: lower-roman;
-}
+
 #img0{
     margin: 10px;
     width: 50px;
@@ -64,83 +57,142 @@ nav{
 }
 .img1{
     background-color: #2f3847;
-    width: 100px;
-    border: 4px solid #2f3847;
+    height: 300px;
+    width: 240px;
+    border: 10px solid #2f3847;
     border-style: ridge;
     margin: 10px;
 }
-/*Flexbox*/
-.caja{
-    /*Box Modeling*/
-    height: 100px;
-    width: 100px;
-    border: 1px solid gray;
-    margin: 10px;
-
-    /*Fonts*/
-    color: black;
-    font-family: 'Montserrat', sans-serif;
+.Barra-p{
     text-align: center;
-    line-height: 100px;
-    font-weight: 900;
-
-    /*Gradientes*/
-    /*background-image: linear-gradient(to left, black, white);*/
-    background-image: linear-gradient( 109.6deg,  rgba(24,138,141,1) 11.2%, rgba(96,221,142,1) 91.1% );
-}
-
-.flex-container{
-    /*Flexbox activado*/
-    display: flex;
-    /*Propiedades de Flex*/
-    /*Define el eje principal es decir de dónde empieza*/
-    flex-direction: row;
-    /*Hace que siga abajo si se queda sin espacio*/
-    flex-wrap: wrap;
-    /*eje principal*/
-    justify-content: center;
-    /*eje secundario*/
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 100px;
+    padding: 10px;
+    background-color: #2f3847;
+    border: solid 2px rgb(32, 32, 32);
 }
 .flex-container-n{
+    background-color: #243340;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    padding: 10px;
+    margin: 0;
 }
 
 .flex-container-n > div{
-
     color: whitesmoke;
 }
 
 .caja-n{
-
     width: 100px;
     height: 100px;
     margin: 10px;
     border: 1px solid whitesmoke;
 
+    display: flex;
+    justify-content: space-around;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     line-height: 40px;
     font-weight: 700;
 }
+.container-responsive-p{
+width: 90%;
+max-width: 1000px;
+border-radius: 10px;
+margin: auto;
+margin-top: 10px;
+margin-bottom: 10px;
+padding: 10px;
 
-.title-grid{
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    font-size: 25px;
+font-size: 30px;
+line-height: 30px;
+text-align: center;
 
-    color: whitesmoke;
-    margin: 10px;
+/*Activamos grid*/
+display: grid;
+/*defino la cantidad de columnas que va a tener mi grilla
+Puede ser Fracciones (fr) Pixeles (px) o Porcentaje (%)*/
+grid-template-columns: 500px 3fr 2fr;
+/*defino la cantidad de filas que va a tener mi grilla*/
+grid-template-rows: 400px 400px 400px;
+column-gap: 10px;
+row-gap: 10px;
+/*eje horizontal: justify-items*/
+/*eje vertical: align-items*/
+
+/*Grid Áreas*/
+grid-template-areas: 
+"imagen texto precio"
+"imagen texto precio"
+"imagen texto precio"
 }
-.container{
+.container-responsive-p > div,
+.container-responsive-p .evento-p,
+.container-responsive-p .juego-p,
+.container-responsive-p .texto-p,
+.container-responsive-p .precio-p{
+    display: block;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #2f3847;
+    border: solid 2px rgb(32, 32, 32);
+
+    display: flex;
+    justify-content: space-around;
+}
+.texto-p{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    background-color: #2f3847;
+    display: flex;
+    align-items: center;
+}
+.promociones-games{
+    border: solid 3px rgb(32, 32, 32);
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+}
+#problema-c{
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.clasific{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 0;
+}
+.completar{
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    margin: 10px;
+    width: 300px;
+    height: 30px;
+}
+.ayuda{
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+.container-responsive{
     width: 90%;
     max-width: 1000px;
-    border: 5px solid black;
+    border-radius: 10px;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+
 
     font-size: 30px;
     line-height: 30px;
@@ -150,10 +202,10 @@ nav{
     display: grid;
     /*defino la cantidad de columnas que va a tener mi grilla
     Puede ser Fracciones (fr) Pixeles (px) o Porcentaje (%)*/
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 500px 3fr 2fr;
     /*defino la cantidad de filas que va a tener mi grilla*/
-    grid-template-rows: 50px 50px 50px 50px;
-    column-gap: 5px;
+    grid-template-rows: 100px 400px 400px 400px;
+    column-gap: 10px;
     row-gap: 10px;
     /*eje horizontal: justify-items*/
     /*eje vertical: align-items*/
@@ -161,22 +213,61 @@ nav{
     /*Grid Áreas*/
     grid-template-areas: 
     "evento evento evento"
-    "imagen texto texto"
-    "imagen texto texto"
-    "imagen texto texto"
+    "imagen texto precio"
+    "imagen texto precio"
+    "imagen texto precio"
     ;
+
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 /*divs que están directamente adentro del class container*/
-.container > div{
+.container-responsive > div,
+.container-responsive .evento,
+.container-responsive .juego,
+.container-responsive .texto,
+.container-responsive .precio{
+    display: block;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #2f3847;
+    border: solid 2px rgb(32, 32, 32);
+
+    display: flex;
+    justify-content: space-around;
+}
+.index-games{
+    border: solid 3px rgb(32, 32, 32);
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+}
+.button-i{
+    font-weight: 10px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.texto{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
     color: whitesmoke;
-    background-color:#2f3847;
+    background-color: #2f3847;
+    display: flex;
+    align-items: center;
 }
 
 /*Propiedades de los hijos GRIDS*/
-.box1{
-    justify-self: center; /*Eje Horizontal*/
-    align-self: flex-end; /*Eje Vertical*/
+.container-responsive .evento{
+    background-color: #2f3847;
+    color: whitesmoke;
+    padding: 10px;
+    grid-area: evento;
+    text-align: start;
 }
 
 .container-c{
@@ -228,6 +319,116 @@ nav{
     cursor: pointer;
 }
 
+.dias{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 50px 50px 50px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+.flechas-izq{
+    width: 20px;
+    height: 20px;
+    display: flex;
+}
+.flechas-der{
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    justify-items: flex-end;
+    rotate: 180deg;
+}
+.mes{
+    border-top: solid 2px rgb(32, 32, 32);
+    border-bottom: solid 2px rgb(32, 32, 32);
+    padding: 10px 25px;
+    width: 100%;
+    background: #2f3847;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.mes ul{
+    margin: 0;
+    padding: 0;
+}
+
+.mes ul li{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.mes .anterior{
+    float: left;
+    padding-top: 10px;
+}
+
+.mes .siguiente{
+    float: right;
+    padding-top: 10px;
+}
+
+.meses{
+    margin: 0;
+    padding: 10px 0;
+    background-color: rgb(48, 47, 47);
+}
+
+.meses li{
+    display: inline-block;
+    width: 13.6%;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.dias{
+    padding: 10px 0;
+    background: rgb(34, 34, 34);
+    margin: 0;
+}
+
+.dias li{
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:15px;
+    color: whitesmoke;
+    display: grid;
+
+    
+}
+
+.dias li .dia-hoy{
+    padding: 5px;
+    background: #185549;
+    color: white;
+}
+
+/*Para pantallas más chicas: Semantica*/
+@media screen and (max-width:720px) {
+.meses li, .dias li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+.meses li, .dias li {width: 12.5%;}
+.dias li .dia-hoy {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+.meses li, .dias li {width: 12.2%;}
+}
 button {
     padding: 1.3em 3em;
     font-size: 11px;
@@ -256,7 +457,10 @@ button:active {
 footer{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    margin-top: 100px;
 
+    border-top: solid 2px rgb(32, 32, 32);
+    border-right: solid 2px rgb(32, 32, 32);
     background-color: #2f3847;
     background-clip: 100%;
 
