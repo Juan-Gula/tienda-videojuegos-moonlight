@@ -9,31 +9,44 @@
     <link rel="stylesheet" href="css/style.css">
     <!--Animaciones-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="./libs/bootstrap-5.2.2-dist/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moonlight</title>
 </head>
-<body>
+<body class="body">
     <!--HTML Semántico-->
     <header>
-        <nav>
-            
+        <nav>          
         <h1 class="animate__animated animate__fadeInDown"> <img id="img0" src="./assets/img/deer.png" alt="ciervo-geometrico">Moonlight</h1>
         <!--listas desordenads-->
         <ul class="menu">
-            <li>
-            <a href="#"><button class="button"> Inicio</button></a>
+            <li class="list-item">
+            <a href="#"><button class="button">Inicio</button></a>
             </li>
             <!--Links internos-->
-            <li>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Páginas
+              </button>
+              <ul class="dropdown-menu">
+                <li> <a class="dropdown-item" href="#"><a href="#"><button class="button">Inicio</button></a></a></li>
+                <li> <a class="dropdown-item" href="#"><a href="./pages/noticias.html"><button class="button"> Noticias</button></a></a></li>
+                <li> <a class="dropdown-item" href="#"><a href="./pages/categorias.html"><button class="button"> Categorías</button></a></a></li>
+                <li> <a class="dropdown-item" href="#"<a href="./pages/contacto.html"><button class="button"> Contacto</button></a></a></li>
+                <li> <a class="dropdown-item" href="#">      <a href="./pages/promociones.html"><button class="button"> Promociones</button></a></a></li>
+              </ul>
+            </div>
+            <li class="list-item">
                 <a href="./pages/noticias.html"><button class="button"> Noticias</button></a>
             </li>
-            <li>
+            <li class="list-item">
                 <a href="./pages/categorias.html"><button class="button"> Categorías</button></a>
             </li>
-            <li>
+            <li class="list-item"> 
                 <a href="./pages/contacto.html"><button class="button"> Contacto</button></a>
             </li>
-            <li>
+            <li class="list-item">
                 <a href="./pages/promociones.html"><button class="button"> Promociones</button></a>
             </li>
         </ul>
@@ -42,27 +55,28 @@
         
             <img class="img1" src="./assets/img-categorias/hattime.png" alt="a-hat-in-time">
             <img class="img1" src="./assets/img-categorias/bioshock.jpg" alt="bioshock">
-            <img class="img1" src="./assets/img-categorias/mgs3.jpg" alt="mgs3">
-        
+            <img class="img1" src="./assets/img-categorias/riskofrain.jpg" alt="risk-of-rain2">
+            <img class="img1" src="./assets/img-categorias/overcooked.jpg" alt="overcooked">
+            
         </section>
         
         </nav>
     
     
         <div class="container-responsive">
-            <div class="evento">Header</div>
+            <div class="evento">Destacados</div>
             <div class="juego"> <img class="index-games" src="/assets/img-categorias/Dishonored.png" alt="Dishonored-game"> </div>
             <div class="texto"> Dishonored es un juego de acción en primera persona al que te entregarás por completo encarnando a un asesino sobrenatural movido por la sed de venganza.</div>
-            <div class="precio"> <button class="button-i">ARS$ 150</button> </div>
+            <div class="precio"> <button class="button">ARS$ 150</button> </div>
             <div class="juego"> <img class="index-games" src="./assets/img-categorias/darksouls.png" alt="dark-souls"></div>
             <div class="texto">Dark Souls nos pone en la piel de un Hueco, una criatura antaño humana sobre la que pesa una maldición: morir y vagar por los mundos de Lordran.</div>
-            <div class="precio"><button class="button-i">ARS$ 150</button></div>
+            <div class="precio"><button class="button">ARS$ 150</button></div>
             <div class="juego"> <img class="index-games" src="./assets/img-categorias/myfriendpedro.png" alt=""> </div>
             <div class="texto">My Friend Pedro es un ballet violento sobre la amistad, la imaginación y la lucha de un hombre por aniquilar a todo el que se interpone en su camino por orden de un plátano parlante.</div>
-            <div class="precio"><button class="button-i">ARS$ 150</button></div>
+            <div class="precio"><button class="button">ARS$ 150</button></div>
         </div>
 
-        <footer>
+        <footer class="footerone">
 
             <p class="footer"> <img class="img-f" src="./assets/icons/question.png" alt="pregunta"> Necesitas Ayuda? Contactanos!</p> 
             <p class="footer"> <img class="img-f" src="./assets/icons/gmail.png" alt="gmail-icon"> Moonlightsupport@gmail.com</p>
@@ -70,5 +84,8 @@
             <p class="footer"> <img class="img-f" src="./assets/icons/phone.png" alt="celular"> +530 11 8453 1276</p>
 
         </footer>
+
+
+        <script src="./libs/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

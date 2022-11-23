@@ -7,34 +7,47 @@
     <link rel="stylesheet" href="../css/style.css">
     <!--Animaciones-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../libs/bootstrap-5.2.2-dist/css/bootstrap.min.css">
     <link rel="shortcut icon" href="../assets/img/ciervo.png" type="image/x-icon">
     <title>Promociones</title>
 </head>
-<body>
+<body class="body">
     <header>
-        <nav>
-            <h1 class="animate__animated animate__fadeInDown"> <img id="img0" src="../assets/img/deer.png" alt="ciervo-geometrico">Moonlight</h1>
+        <nav>          
+        <h1 class="animate__animated animate__fadeInDown"> <img id="img0" src="../assets/img/deer.png" alt="ciervo-geometrico">Moonlight</h1>
         <!--listas desordenads-->
         <ul class="menu">
-            <li>
-                <a href="../index.html"><button class="button"> Inicio</button></a>
-                </li>
-                <!--Links internos-->
-                <li>
-                    <a href="../pages/noticias.html"><button class="button"> Noticias</button></a>
-                </li>
-                <li>
-                    <a href="../pages/categorias.html"><button class="button"> Categorías</button></a>
-                </li>
-                <li>
-                    <a href="../pages/contacto.html"><button class="button"> Contacto</button></a>
-                </li>
-                <li>
-                    <a href="#"><button class="button"> Promociones</button></a>
-                </li>
+            <li class="list-item">
+            <a href="/index.html"><button class="button">Inicio</button></a>
+            </li>
+            <!--Links internos-->
+            <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Páginas
+            </button>
+            <ul class="dropdown-menu">
+                <li> <a class="dropdown-item" href="#"><a href="/index.html"><button class="button">Inicio</button></a></a></li>
+                <li> <a class="dropdown-item" href="#"><a href="../pages/noticias.html"><button class="button"> Noticias</button></a></a></li>
+                <li> <a class="dropdown-item" href="#"><a href="../pages/categorias.html"><button class="button"> Categorías</button></a></a></li>
+                <li> <a class="dropdown-item" href="#"><a href="../pages/contacto.html"><button class="button"> Contacto</button></a></a></li>
+                <li> <a class="dropdown-item" href="#"><a href="../pages/promociones.html"><button class="button"> Promociones</button></a></a></li>
+            </ul>
+            </div>
+            <li class="list-item">
+                <a href="/pages/noticias.html"><button class="button"> Noticias</button></a>
+            </li>
+            <li class="list-item">
+                <a href="/pages/categorias.html"><button class="button"> Categorías</button></a>
+            </li>
+            <li class="list-item"> 
+                <a href="/pages/contacto.html"><button class="button"> Contacto</button></a>
+            </li>
+            <li class="list-item">
+                <a href="/pages/promociones.html"><button class="button"> Promociones</button></a>
+            </li>
         </ul>
-    
-        </nav>
+    </header>
 
         <div class="Barra-p">
             <div class="titulos">Más Jugados</div>
@@ -47,13 +60,13 @@
         <div class="container-responsive-p">
             <div class="juego-p"> <img class="promociones-games" src="/assets/img-categorias/Dishonored.png" alt="Dishonored-game"> </div>
             <div class="texto-p"> Dishonored es un juego de acción en primera persona al que te entregarás por completo encarnando a un asesino sobrenatural movido por la sed de venganza.</div>
-            <div class="precio-p"> <button class="button-i">ARS$ 150</button> </div>
+            <div class="precio-p"> <button class="button">ARS$ 150</button> </div>
             <div class="juego-p"> <img class="promociones-games" src="/assets/img-categorias/darksouls.png" alt="dark-souls"></div>
             <div class="texto-p">Dark Souls nos pone en la piel de un Hueco, una criatura antaño humana sobre la que pesa una maldición: morir y vagar por los mundos de Lordran.</div>
-            <div class="precio-p"><button class="button-i">ARS$ 150</button></div>
+            <div class="precio-p"><button class="button">ARS$ 150</button></div>
             <div class="juego-p"> <img class="promociones-games" src="/assets/img-categorias/myfriendpedro.png" alt=""> </div>
             <div class="texto-p">My Friend Pedro es un ballet violento sobre la amistad, la imaginación y la lucha de un hombre por aniquilar a todo el que se interpone en su camino por orden de un plátano parlante.</div>
-            <div class="precio-p"><button class="button-i">ARS$ 150</button></div>
+            <div class="precio-p"><button class="button">ARS$ 150</button></div>
         </div>
 
         <footer>
@@ -64,6 +77,6 @@
             <p class="footer"> <img class="img-f" src="/assets/icons/phone.png" alt="celular"> +530 11 8453 1276</p>
 
         </footer>
-    </header>
+    <script src="../libs/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
