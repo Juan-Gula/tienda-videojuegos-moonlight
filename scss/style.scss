@@ -5,6 +5,11 @@
     font-family: monserrat;
     src: url(../assets/font/Montserrat-Thin.ttf);
 }
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 .body{
     background-color: #243340;
     color: whitesmoke;
@@ -509,7 +514,7 @@ footer{
     .container-responsive{
     display: grid;
     font-size: 20px;
-    grid-template-columns: 3fr 3fr 1fr;
+    grid-template-columns: 3fr 5fr;
     grid-template-rows: 100px 350px 350px 350px;
         grid-template-areas: 
         "evento  evento  evento"
@@ -521,9 +526,14 @@ footer{
     .container-responsive .texto{
         grid-column: 2/4;
         font-size: small;
+        line-height: 20px;
     }
     .container-responsive .precio{
         display: none;
+    }
+    .index-games{
+        width: 150px;
+        height: 200px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -582,10 +592,17 @@ footer{
     .section{
         display: grid;
         margin: 25px;
-        padding-top:100px ;
         gap: 40px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 300px 300px;
+        grid-template-areas: 
+        "imagen imagen"
+        "imagen imagen"
+        ;
+    }
+    .img1{
+        width: 95%;
+        height: 95%;
     }
     
 }
