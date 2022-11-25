@@ -501,6 +501,12 @@ footer {
   height: 15px;
 }
 
+.lista {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*Para pantallas más chicas: Semantica*/
 @media screen and (max-width: 720px) {
   .meses li, .dias li {
@@ -553,9 +559,17 @@ footer {
   .container-responsive-p .texto-p {
     grid-column: 2/4;
     font-size: small;
+    line-height: 20px;
   }
   .container-responsive-p .precio-p {
     display: none;
+  }
+  .promociones-games {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media screen and (max-width: 768px) {
@@ -577,6 +591,17 @@ footer {
     grid-column-end: 3;
   }
 }
+@media screen and (max-width: 522px) {
+  .container-c {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px 400px 400px 400px 400px;
+    gap: 5px;
+    grid-template-areas: "imagen" "imagen" "imagen" "imagen" "imagen" "imagen" "imagen" "imagen" "imagen" "imagen" "imagen" "imagen";
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
 @media screen and (max-width: 768px) {
   .section {
     display: grid;
@@ -588,7 +613,7 @@ footer {
   }
   .img1 {
     width: 95%;
-    height: 95%;
+    height: 80%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -615,6 +640,21 @@ footer {
     margin: 0;
     padding: 0;
     background-color: #2f3847;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Barra-p {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    letter-spacing: 5px;
+    padding: 10px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 462px) {
+  .areatexto {
+    width: 80%;
   }
 }
 
