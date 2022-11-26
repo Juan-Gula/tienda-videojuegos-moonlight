@@ -484,6 +484,7 @@ footer{
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 115px;
 }
 .footer{
     color: white;
@@ -686,4 +687,9 @@ footer{
         width: 80%;
     }
     
+}
+@media screen and (max-width:392px) {
+    footer{
+        height: 100px;
+    }    
 }

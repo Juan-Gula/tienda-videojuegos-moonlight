@@ -486,6 +486,7 @@ footer {
   background-clip: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 115px;
 }
 
 .footer {
@@ -655,6 +656,11 @@ footer {
 @media screen and (max-width: 462px) {
   .areatexto {
     width: 80%;
+  }
+}
+@media screen and (max-width: 392px) {
+  footer {
+    height: 100px;
   }
 }
 
