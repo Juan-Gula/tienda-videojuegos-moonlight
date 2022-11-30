@@ -76,6 +76,7 @@ nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    gap: 5px;
     margin: 50px;
     padding: 10px;
     background-color: #2f3847;
@@ -543,6 +544,29 @@ footer{
         height: 200px;
     }
 }
+@media screen and (max-width: 1024px) and (min-width:768px) {
+    .container-responsive{
+    display: grid;
+    font-size: 20px;
+    grid-template-columns: 3fr 5fr 1fr;
+    grid-template-rows: 100px 350px 350px 350px;
+        grid-template-areas: 
+        "evento  evento  evento"
+        "imagen  texto  precio"
+        "imagen  texto  precio"
+        "imagen  texto  precio"
+    ;
+    }
+    .container-responsive .texto{
+        font-size: medium;
+        line-height: 20px;
+    }
+
+    .index-games{
+        width: 150px;
+        height: 200px;
+    }
+}
 @media screen and (max-width: 768px) {
     .container-responsive-p{
     display: grid;
@@ -583,6 +607,29 @@ footer{
     grid-template-rows: 400px 400px 400px;
     } 
 }
+@media screen and (max-width: 1024px) {
+    .container-responsive-p{
+    display: grid;
+        grid-template-areas: 
+        "imagen texto precio"
+        "imagen texto precio"
+        "imagen texto precio"
+    ;
+    grid-template-columns: 3fr 5fr 1fr;
+    grid-template-rows: 400px 400px 400px;
+    } 
+}
+@media screen and (max-width:768px) {
+    .Barra-p{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 5px;
+        letter-spacing: 5px;
+        padding: 10px;
+        line-height: 20px;
+    }
+}  
 @media screen and (max-width: 768px) {
     .container-c{
         display: grid;
@@ -627,7 +674,26 @@ footer{
         grid-column-end: 3;
     }
     
-}       
+}
+@media screen and (max-width: 1332px) and (min-width:768px) {
+    .container-c{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 400px 400px 400px 400px 400px 400px;
+        gap: 5px;
+        grid-template-areas: 
+        "imagen imagen"
+        "imagen imagen"
+        "imagen imagen"
+        "imagen imagen"
+        "imagen imagen"
+        "imagen imagen"
+        ;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+}        
 @media screen and (max-width:768px) {
     .section{
         display: grid;
@@ -643,9 +709,29 @@ footer{
     .img1{
         width: 95%;
         height: 80%;
+        justify-content: space-around;
     }
     
 }
+@media screen and (max-width:1024px) and (min-width:768px) {
+    .section{
+        display: grid;
+        margin: 25px;
+        gap: 40px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 300px;
+        grid-template-areas: 
+        "imagen imagen"
+        "imagen imagen"
+        ;
+    }
+    .img1{
+        width: 60%;
+        height: 80%;
+    }
+    
+}
+
 @media screen and (max-width:768px) {
     .menu{
         margin: 10px;
@@ -670,16 +756,6 @@ footer{
         margin: 0;
         padding: 0;
         background-color: #2f3847;
-    }
-}
-@media screen and (max-width:768px) {
-    .Barra-p{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        letter-spacing: 5px;
-        padding: 10px;
-        line-height: 20px;
     }
 }
 @media screen and (max-width:462px) {
