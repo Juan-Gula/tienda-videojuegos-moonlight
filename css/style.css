@@ -384,25 +384,21 @@ ul {
   grid-template-columns: 1fr;
   text-align: center;
 }
-
-.mes ul {
+.mes .mes ul {
   margin: 0;
   padding: 0;
 }
-
-.mes ul li {
+.mes .mes ul .mes ul li {
   color: white;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
-
-.mes .anterior {
+.mes .mes ul .mes ul li .mes .anterior {
   float: left;
   padding-top: 10px;
 }
-
-.mes .siguiente {
+.mes .mes ul .mes ul li .mes .anterior .mes .siguiente {
   float: right;
   padding-top: 10px;
 }

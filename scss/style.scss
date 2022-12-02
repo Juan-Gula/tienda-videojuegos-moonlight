@@ -381,28 +381,24 @@ ul{
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
-}
-
-.mes ul{
-    margin: 0;
-    padding: 0;
-}
-
-.mes ul li{
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-.mes .anterior{
-    float: left;
-    padding-top: 10px;
-}
-
-.mes .siguiente{
-    float: right;
-    padding-top: 10px;
+    .mes ul{
+        margin: 0;
+        padding: 0;
+        .mes ul li{
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            .mes .anterior{
+                float: left;
+                padding-top: 10px;
+                .mes .siguiente{
+                    float: right;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
 }
 
 .meses{
@@ -432,7 +428,7 @@ ul{
         font-size:15px;
         color: whitesmoke;
         display: grid;
-        
+
         .dias li .dia-hoy{
             padding: 5px;
             background: #185549;
