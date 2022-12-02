@@ -425,8 +425,7 @@ ul {
   background: rgb(34, 34, 34);
   margin: 0;
 }
-
-.dias li {
+.dias .dias li {
   list-style-type: none;
   display: inline-block;
   width: 13.6%;
@@ -436,8 +435,7 @@ ul {
   color: whitesmoke;
   display: grid;
 }
-
-.dias li .dia-hoy {
+.dias .dias li .dias li .dia-hoy {
   padding: 5px;
   background: #185549;
   color: white;

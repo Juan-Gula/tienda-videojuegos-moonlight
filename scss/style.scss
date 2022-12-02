@@ -422,26 +422,26 @@ ul{
     padding: 10px 0;
     background: rgb(34, 34, 34);
     margin: 0;
+
+    .dias li{
+        list-style-type: none;
+        display: inline-block;
+        width: 13.6%;
+        text-align: center;
+        margin-bottom: 5px;
+        font-size:15px;
+        color: whitesmoke;
+        display: grid;
+        
+        .dias li .dia-hoy{
+            padding: 5px;
+            background: #185549;
+            color: white;
+        }
+        
+    }
 }
 
-.dias li{
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size:15px;
-    color: whitesmoke;
-    display: grid;
-
-    
-}
-
-.dias li .dia-hoy{
-    padding: 5px;
-    background: #185549;
-    color: white;
-}
 .button-1{
     font-weight: 10px;
     width: 100px;
