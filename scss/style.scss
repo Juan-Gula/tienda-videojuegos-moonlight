@@ -5,6 +5,10 @@
     font-family: monserrat;
     src: url(../assets/font/Montserrat-Thin.ttf);
 }
+/*Variables*/
+$color-letras:color whitesmoke;
+$font-family: 'Montserrat', sans-serif;
+
 *{
     margin: 0px;
     padding: 0px;
@@ -18,8 +22,8 @@
 }
 .h1{
     background-color: #2f3847;
-    color: whitesmoke;
-    font-family: 'Montserrat', sans-serif;
+    color: $color-letras;
+    font-family: $font-family;
     display: flex;
     align-items: center;
     margin: 0;
