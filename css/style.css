@@ -1,9 +1,9 @@
-/* Error: Expected expression.
+/* Error: expected ":".
  *    ,
- * 30 | @debug map-get($colors: , $key: )
- *    |                         ^
+ * 19 | "f-family": 'Montserrat', sans-serif,
+ *    |                                     ^
  *    '
- *   scss\style.scss 30:25  root stylesheet */
+ *   scss\style.scss 19:37  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 30 \2502  @debug map-get($colors: , $key: )\d\a    \2502                          ^\a    \2575 \a   scss\\style.scss 30:25  root stylesheet";
+  content: "Error: expected \":\".\a    \2577 \a 19 \2502  \"f-family\": 'Montserrat', sans-serif,\d\a    \2502                                      ^\a    \2575 \a   scss\\style.scss 19:37  root stylesheet";
 }

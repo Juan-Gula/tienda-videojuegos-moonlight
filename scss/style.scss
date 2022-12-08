@@ -12,7 +12,11 @@ $font-family: 'Montserrat', sans-serif;
 @import "_buttons"; 
 @import "_calendar";
 
-$colors: (
+$colors-font: (
+"background-color": #243340,
+"second-bc": #2f3847,
+"font": whitesmoke,
+"f-family": 'Montserrat', sans-serif,
 "cyan": cyan,
 "blue": blue,
 "purple": purple,
@@ -27,7 +31,11 @@ $colors: (
 "black": black 
 );
 
-@debug map-get($colors: , $key: )
+div {
+    background-color: map-get($colors-font, background-color);
+    color: map-get($colors-font, font);
+    font-family: map-get($colors-font, f-family );
+}
 
 *{
     margin: 0px;
