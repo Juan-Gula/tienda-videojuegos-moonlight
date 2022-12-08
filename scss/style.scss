@@ -12,6 +12,23 @@ $font-family: 'Montserrat', sans-serif;
 @import "_buttons"; 
 @import "_calendar";
 
+$colors: (
+"cyan": cyan,
+"blue": blue,
+"purple": purple,
+"brown": brown,
+"red": red,
+"orange": orange,
+"yellow": yellow,
+"light-green":lightgreen,
+"green": green,
+"dark-gray": darkgray,
+"gray": gray,
+"black": black 
+);
+
+@debug map-get($colors: , $key: )
+
 *{
     margin: 0px;
     padding: 0px;
