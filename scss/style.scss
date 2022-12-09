@@ -13,30 +13,16 @@ $font-family: 'Montserrat', sans-serif;
 @import "_calendar";
 
 $colors-font: (
-"background-color": #243340,
-"second-bc": #2f3847,
-"font": whitesmoke,
-"f-family": 'Montserrat', sans-serif,
-"cyan": cyan,
-"blue": blue,
-"purple": purple,
-"brown": brown,
-"red": red,
-"orange": orange,
-"yellow": yellow,
-"light-green":lightgreen,
-"green": green,
-"dark-gray": darkgray,
-"gray": gray,
-"black": black 
+background-color: #243340,
+second-bc: #2f3847,
+color: whitesmoke,
+f-family: 'Montserrat', 
 );
 
-div {
-    background-color: map-get($colors-font, background-color);
-    color: map-get($colors-font, font);
-    font-family: map-get($colors-font, f-family );
+.texto{
+    background-color: map-get($colors-font, background-color );
+    color: map-get($colors-font, light-green );
 }
-
 *{
     margin: 0px;
     padding: 0px;
@@ -57,6 +43,33 @@ div {
     margin: 0;
     padding: 0;
 }
+.h1:hover{
+    @extend .h1;
+    -webkit-animation: zomg 0.5s infinite;
+    animation: zomg 0.5s infinite;
+}
+    .h1:hover {
+        -webkit-animation: zomg 0.5s infinite;
+        animation: zomg 0.5s infinite;
+    }
+    
+    @-webkit-keyframes zomg {
+        0%, 100% { color: #7ccdea; }
+        16%      { color: #0074d9; }
+        32%      { color: #2ecc40; }
+        48%      { color: #ffdc00; }
+        64%      { color: #b10dc9; }
+        80%      { color: #ff4136; }
+}
+    @keyframes zomg {
+        0%, 100% { color: #7ccdea; }
+        16%      { color: #0074d9; }
+        32%      { color: #2ecc40; }
+        48%      { color: #ffdc00; }
+        64%      { color: #b10dc9; }
+        80%      { color: #ff4136; }
+}
+
 .dropdown{
     display: none;
 }
@@ -98,7 +111,7 @@ nav{
     background-color: #2f3847;
     height: 300px;
     width: 240px;
-    border: 10px solid #2f3847;
+    border: 7px solid #2f3847;
     border-radius: 10px;
     border-style: ridge;
     margin: 10px;
@@ -216,18 +229,19 @@ grid-template-areas:
     margin: 20px;
     padding: 0;
 }
-.completar{
+@mixin center-components{
     justify-content: center;
     align-items: center;
     text-align: center; 
+}
+.completar{
+    @include center-components;
     margin: 10px;
     width: 300px;
     height: 30px;
 }
 .ayuda{
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
+    @include center-components;
 }
 .container-responsive{
     width: 90%;

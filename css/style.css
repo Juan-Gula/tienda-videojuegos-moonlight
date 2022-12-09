@@ -1,17 +1,769 @@
-/* Error: expected ":".
- *    ,
- * 19 | "f-family": 'Montserrat', sans-serif,
- *    |                                     ^
- *    '
- *   scss\style.scss 19:37  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: expected \":\".\a    \2577 \a 19 \2502  \"f-family\": 'Montserrat', sans-serif,\d\a    \2502                                      ^\a    \2575 \a   scss\\style.scss 19:37  root stylesheet";
+@charset "UTF-8";
+/*Fuentes externas*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+/*Fuentes interas*/
+@font-face {
+  font-family: monserrat;
+  src: url(../assets/font/Montserrat-Thin.ttf);
 }
+/*Variables*/
+.button-1 {
+  font-weight: 10px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  padding: 1.3em 3em;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: black;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button:active {
+  transform: translateY(-1px);
+}
+
+.dias {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 50px 50px 50px 50px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.flechas-izq {
+  width: 20px;
+  height: 20px;
+  display: flex;
+}
+
+.flechas-der {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  rotate: 180deg;
+}
+
+.mes {
+  border-top: solid 2px rgb(32, 32, 32);
+  border-bottom: solid 2px rgb(32, 32, 32);
+  padding: 10px 25px;
+  width: 100%;
+  background: #2f3847;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.mes .mes ul {
+  margin: 0;
+  padding: 0;
+}
+.mes .mes ul .mes ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.mes .mes ul .mes ul li .mes .anterior {
+  float: left;
+  padding-top: 10px;
+}
+.mes .mes ul .mes ul li .mes .anterior .mes .siguiente {
+  float: right;
+  padding-top: 10px;
+}
+
+.meses {
+  margin: 0;
+  padding: 10px 0;
+  background-color: rgb(48, 47, 47);
+}
+
+.meses li {
+  display: inline-block;
+  width: 13.6%;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.dias {
+  padding: 10px 0;
+  background: rgb(34, 34, 34);
+  margin: 0;
+}
+.dias .dias li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: whitesmoke;
+  display: grid;
+}
+.dias .dias li .dias li .dia-hoy {
+  padding: 5px;
+  background: #185549;
+  color: white;
+}
+
+.texto {
+  background-color: #243340;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: #243340;
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+.h1, .h1:hover {
+  background-color: #2f3847;
+  color: color whitesmoke;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.h1:hover {
+  -webkit-animation: zomg 0.5s infinite;
+  animation: zomg 0.5s infinite;
+}
+
+.h1:hover {
+  -webkit-animation: zomg 0.5s infinite;
+  animation: zomg 0.5s infinite;
+}
+
+@-webkit-keyframes zomg {
+  0%, 100% {
+    color: #7ccdea;
+  }
+  16% {
+    color: #0074d9;
+  }
+  32% {
+    color: #2ecc40;
+  }
+  48% {
+    color: #ffdc00;
+  }
+  64% {
+    color: #b10dc9;
+  }
+  80% {
+    color: #ff4136;
+  }
+}
+@keyframes zomg {
+  0%, 100% {
+    color: #7ccdea;
+  }
+  16% {
+    color: #0074d9;
+  }
+  32% {
+    color: #2ecc40;
+  }
+  48% {
+    color: #ffdc00;
+  }
+  64% {
+    color: #b10dc9;
+  }
+  80% {
+    color: #ff4136;
+  }
+}
+.dropdown {
+  display: none;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.menu {
+  color: whitesmoke;
+  height: 100px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  background-color: #2f3847;
+  margin: 0;
+  border-bottom: solid 2px rgb(32, 32, 32);
+  padding: 0;
+}
+
+nav {
+  background-color: #2f3847;
+}
+
+#img0 {
+  margin: 10px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.img1 {
+  background-color: #2f3847;
+  height: 300px;
+  width: 240px;
+  border: 7px solid #2f3847;
+  border-radius: 10px;
+  border-style: ridge;
+  margin: 10px;
+}
+
+.Barra-p {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 5px;
+  margin: 50px;
+  padding: 10px;
+  background-color: #2f3847;
+  border: solid 2px rgb(32, 32, 32);
+}
+
+.flex-container-n {
+  background-color: #243340;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  margin: 0;
+}
+
+.flex-container-n > div {
+  color: whitesmoke;
+}
+
+.caja-n {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.container-responsive-p {
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  /*Activamos grid*/
+  display: grid;
+  /*defino la cantidad de columnas que va a tener mi grilla
+  Puede ser Fracciones (fr) Pixeles (px) o Porcentaje (%)*/
+  grid-template-columns: 500px 3fr 2fr;
+  /*defino la cantidad de filas que va a tener mi grilla*/
+  grid-template-rows: 400px 400px 400px;
+  column-gap: 10px;
+  row-gap: 10px;
+  /*eje horizontal: justify-items*/
+  /*eje vertical: align-items*/
+  /*Grid Áreas*/
+  grid-template-areas: "imagen texto precio" "imagen texto precio" "imagen texto precio";
+}
+
+.container-responsive-p > div,
+.container-responsive-p .evento-p,
+.container-responsive-p .juego-p,
+.container-responsive-p .texto-p,
+.container-responsive-p .precio-p {
+  display: block;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #2f3847;
+  border: solid 2px rgb(32, 32, 32);
+  display: flex;
+  justify-content: space-around;
+}
+
+.precio-p {
+  display: flex;
+  align-items: center;
+}
+
+.texto-p {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: whitesmoke;
+  background-color: #2f3847;
+  display: flex;
+  align-items: center;
+}
+
+.promociones-games {
+  border: solid 3px rgb(32, 32, 32);
+  border-radius: 10px;
+  width: 220px;
+  height: 300px;
+}
+
+#problema-c {
+  font-size: large;
+  font-family: "Montserrat", sans-serif;
+}
+
+.clasific {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  padding: 0;
+}
+
+.completar {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  width: 300px;
+  height: 30px;
+}
+
+.ayuda {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container-responsive {
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  /*Activamos grid*/
+  display: grid;
+  /*defino la cantidad de columnas que va a tener mi grilla
+  Puede ser Fracciones (fr) Pixeles (px) o Porcentaje (%)*/
+  grid-template-columns: 500px 3fr 2fr;
+  /*defino la cantidad de filas que va a tener mi grilla*/
+  grid-template-rows: 100px 400px 400px 400px;
+  column-gap: 10px;
+  row-gap: 10px;
+  /*eje horizontal: justify-items*/
+  /*eje vertical: align-items*/
+  /*Grid Áreas*/
+  grid-template-areas: "evento evento evento" "imagen texto precio" "imagen texto precio" "imagen texto precio";
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+/*divs que están directamente adentro del class container*/
+.container-responsive > div,
+.container-responsive .evento,
+.container-responsive .juego,
+.container-responsive .texto,
+.container-responsive .precio {
+  display: block;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #2f3847;
+  border: solid 2px rgb(32, 32, 32);
+  display: flex;
+  justify-content: space-around;
+}
+
+.evento {
+  margin: 10px;
+  display: flex;
+  text-align: center;
+}
+
+.precio {
+  display: flex;
+  align-items: center;
+}
+
+.index-games {
+  border: solid 3px rgb(32, 32, 32);
+  border-radius: 5px;
+  width: 220px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.button-i {
+  font-weight: 10px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: whitesmoke;
+  background-color: #2f3847;
+  display: flex;
+  align-items: center;
+}
+
+/*Propiedades de los hijos GRIDS*/
+.container-responsive .evento {
+  background-color: #2f3847;
+  color: whitesmoke;
+  padding: 10px;
+  grid-area: evento;
+  text-align: start;
+}
+
+.container-c {
+  width: 90%;
+  border: 3px solid #243340;
+  margin: auto;
+  font-size: 30px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 256px 256px 256px 256px;
+  grid-template-rows: 320px 320px 320px;
+  gap: 100px;
+  /*Áreas grid*/
+  grid-template-areas: "Imagén   Imagén   Imagén   Imagén" "Imagén   Imagén   Imagén   Imagén" "Imagén   Imagén   Imagén   Imagén";
+}
+
+.box-c {
+  background-color: #243340;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.img-c {
+  border: solid 10px #2f3847;
+  cursor: pointer;
+  height: 300px;
+  width: 240px;
+  margin: 10px;
+  transition: height 2s, width 2s;
+  animation-name: imagen-animacion;
+  animation-iteration-count: 1s;
+  animation-duration: 2s;
+}
+
+.img-c2 {
+  display: none;
+  position: absolute;
+  height: 300px;
+  width: 240px;
+  margin: 10px;
+}
+
+.img-c:hover {
+  height: 320px;
+  width: 256px;
+  display: inline;
+  cursor: pointer;
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  border-top: solid 2px rgb(32, 32, 32);
+  background-color: #2f3847;
+  background-clip: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 115px;
+}
+
+.footer {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.img-f {
+  width: 15px;
+  height: 15px;
+}
+
+.lista {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Para pantallas más chicas: Semantica*/
+@media screen and (max-width: 720px) {
+  .meses li, .dias li {
+    width: 13.1%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .meses li, .dias li {
+    width: 12.5%;
+  }
+  .dias li .dia-hoy {
+    padding: 2px;
+  }
+}
+@media screen and (max-width: 290px) {
+  .meses li, .dias li {
+    width: 12.2%;
+  }
+}
+/*Grids semantico*/
+@media screen and (max-width: 768px) {
+  .container-responsive {
+    display: grid;
+    font-size: 20px;
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: 100px 350px 350px 350px;
+    grid-template-areas: "evento  evento  evento" "imagen  texto  texto" "imagen  texto  texto" "imagen  texto  texto";
+  }
+  .container-responsive .texto {
+    grid-column: 2/4;
+    font-size: small;
+    line-height: 20px;
+  }
+  .container-responsive .precio {
+    display: none;
+  }
+  .index-games {
+    width: 150px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .container-responsive {
+    display: grid;
+    font-size: 20px;
+    grid-template-columns: 3fr 5fr 1fr;
+    grid-template-rows: 100px 350px 350px 350px;
+    grid-template-areas: "evento  evento  evento" "imagen  texto  precio" "imagen  texto  precio" "imagen  texto  precio";
+  }
+  .container-responsive .texto {
+    font-size: medium;
+    line-height: 20px;
+  }
+  .index-games {
+    width: 150px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-responsive-p {
+    display: grid;
+    font-size: 20px;
+    grid-template-columns: 3fr 3fr 1fr;
+    grid-template-rows: 100px 350px 350px 350px;
+    grid-template-areas: "imagen  texto  texto" "imagen  texto  texto" "imagen  texto  texto";
+  }
+  .container-responsive-p .texto-p {
+    grid-column: 2/4;
+    font-size: small;
+    line-height: 20px;
+  }
+  .container-responsive-p .precio-p {
+    display: none;
+  }
+  .promociones-games {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-responsive-p {
+    display: grid;
+    grid-template-areas: "imagen texto precio" "imagen texto precio" "imagen texto precio";
+    grid-template-columns: 3fr 4fr 1fr;
+    grid-template-rows: 400px 400px 400px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container-responsive-p {
+    display: grid;
+    grid-template-areas: "imagen texto precio" "imagen texto precio" "imagen texto precio";
+    grid-template-columns: 3fr 5fr 1fr;
+    grid-template-rows: 400px 400px 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Barra-p {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    letter-spacing: 5px;
+    padding: 10px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-c {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 400px 400px 400px 400px 400px;
+    gap: 5px;
+    grid-template-areas: "imagen imagen" "imagen imagen" "imagen imagen" "imagen imagen" "imagen imagen" "imagen imagen";
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media screen and (max-width: 522px) {
+  .container-c {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px 400px 400px 400px 400px;
+    gap: 5px;
+    grid-template-areas: "imagen" "imagen" "imagen" "imagen" "imagen" "imagen" "imagen" "imagen" "imagen" "imagen" "imagen" "imagen";
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media screen and (max-width: 1332px) and (min-width: 768px) {
+  .container-c {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 400px 400px 400px 400px 400px;
+    gap: 5px;
+    grid-template-areas: "imagen imagen" "imagen imagen" "imagen imagen" "imagen imagen" "imagen imagen" "imagen imagen";
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section {
+    display: grid;
+    margin: 25px;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    grid-template-areas: "imagen imagen" "imagen imagen";
+  }
+  .img1 {
+    width: 95%;
+    height: 80%;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .section {
+    display: grid;
+    margin: 25px;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    grid-template-areas: "imagen imagen" "imagen imagen";
+  }
+  .img1 {
+    width: 60%;
+    height: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    margin: 10px;
+    padding: 0px;
+    text-align: center;
+    background-color: #2f3847;
+  }
+  .list-item {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+    display: flex;
+    justify-items: right;
+  }
+  .dropdown-item {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+    background-color: #2f3847;
+  }
+}
+@media screen and (max-width: 462px) {
+  .areatexto {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 392px) {
+  footer {
+    height: 100px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
