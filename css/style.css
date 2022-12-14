@@ -42,10 +42,11 @@
   transform: translateY(-1px);
 }
 
+/**Serpando el scss en varias partes**/
 .dias {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 50px 50px 50px 50px 50px;
+  grid-template-rows: 70px 70px 70px 70px 70px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -55,19 +56,12 @@ ul {
   list-style-type: none;
 }
 
-.flechas-izq {
-  width: 20px;
-  height: 20px;
-  display: flex;
-}
-
-.flechas-der {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  rotate: 180deg;
+.año {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3px;
 }
 
 .mes {
@@ -84,17 +78,11 @@ ul {
   margin: 0;
   padding: 0;
 }
-.mes .mes ul .mes ul li {
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-.mes .mes ul .mes ul li .mes .anterior {
+.mes .mes ul .mes .anterior {
   float: left;
   padding-top: 10px;
 }
-.mes .mes ul .mes ul li .mes .anterior .mes .siguiente {
+.mes .mes ul .mes .anterior .mes .siguiente {
   float: right;
   padding-top: 10px;
 }
@@ -113,7 +101,7 @@ ul {
 }
 
 .dias {
-  padding: 10px 0;
+  padding: 30px 0;
   background: rgb(34, 34, 34);
   margin: 0;
 }
@@ -127,10 +115,14 @@ ul {
   color: whitesmoke;
   display: grid;
 }
-.dias .dias li .dias li .dia-hoy {
+
+.dia-hoy {
+  background-color: #185549;
   padding: 5px;
-  background: #185549;
-  color: white;
+}
+
+.fecha-salida {
+  background-color: #185549;
 }
 
 .texto {
@@ -150,7 +142,7 @@ ul {
   padding: 0;
 }
 
-.h1, .h1:hover {
+.h1 {
   background-color: #2f3847;
   color: color whitesmoke;
   font-family: "Montserrat", sans-serif;
@@ -160,56 +152,6 @@ ul {
   padding: 0;
 }
 
-.h1:hover {
-  -webkit-animation: zomg 0.5s infinite;
-  animation: zomg 0.5s infinite;
-}
-
-.h1:hover {
-  -webkit-animation: zomg 0.5s infinite;
-  animation: zomg 0.5s infinite;
-}
-
-@-webkit-keyframes zomg {
-  0%, 100% {
-    color: #7ccdea;
-  }
-  16% {
-    color: #0074d9;
-  }
-  32% {
-    color: #2ecc40;
-  }
-  48% {
-    color: #ffdc00;
-  }
-  64% {
-    color: #b10dc9;
-  }
-  80% {
-    color: #ff4136;
-  }
-}
-@keyframes zomg {
-  0%, 100% {
-    color: #7ccdea;
-  }
-  16% {
-    color: #0074d9;
-  }
-  32% {
-    color: #2ecc40;
-  }
-  48% {
-    color: #ffdc00;
-  }
-  64% {
-    color: #b10dc9;
-  }
-  80% {
-    color: #ff4136;
-  }
-}
 .dropdown {
   display: none;
 }
@@ -290,16 +232,41 @@ nav {
 }
 
 .caja-n {
-  width: 100px;
-  height: 100px;
+  width: 240px;
+  height: 300px;
   margin: 10px;
-  border: 1px solid whitesmoke;
   display: flex;
   justify-content: space-around;
   text-align: center;
+  text-justify: center;
   font-family: "Montserrat", sans-serif;
   line-height: 40px;
   font-weight: 700;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: 30px;
+}
+
+.evento-n {
+  width: 240px;
+  height: 300px;
+  border: solid 5px #2f3847;
+}
+
+.barra-n {
+  background-color: #243340;
+  padding: 10%;
+}
+
+.titulo-n {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.subtitulos-n {
+  text-align: center;
+  font-size: 25px;
 }
 
 .container-responsive-p {

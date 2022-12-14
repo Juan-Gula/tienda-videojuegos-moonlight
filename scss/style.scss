@@ -43,32 +43,6 @@ f-family: 'Montserrat',
     margin: 0;
     padding: 0;
 }
-.h1:hover{
-    @extend .h1;
-    -webkit-animation: zomg 0.5s infinite;
-    animation: zomg 0.5s infinite;
-}
-    .h1:hover {
-        -webkit-animation: zomg 0.5s infinite;
-        animation: zomg 0.5s infinite;
-    }
-    
-    @-webkit-keyframes zomg {
-        0%, 100% { color: #7ccdea; }
-        16%      { color: #0074d9; }
-        32%      { color: #2ecc40; }
-        48%      { color: #ffdc00; }
-        64%      { color: #b10dc9; }
-        80%      { color: #ff4136; }
-}
-    @keyframes zomg {
-        0%, 100% { color: #7ccdea; }
-        16%      { color: #0074d9; }
-        32%      { color: #2ecc40; }
-        48%      { color: #ffdc00; }
-        64%      { color: #b10dc9; }
-        80%      { color: #ff4136; }
-}
 
 .dropdown{
     display: none;
@@ -136,6 +110,7 @@ nav{
     align-items: flex-start;
     padding: 10px;
     margin: 0;
+
 }
 
 .flex-container-n > div{
@@ -143,17 +118,39 @@ nav{
 }
 
 .caja-n{
-    width: 100px;
-    height: 100px;
+    width: 240px;
+    height: 300px;
     margin: 10px;
-    border: 1px solid whitesmoke;
 
     display: flex;
     justify-content: space-around;
     text-align: center;
+    text-justify: center;
     font-family: 'Montserrat', sans-serif;
     line-height: 40px;
     font-weight: 700;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 30px;
+}
+.evento-n{
+    width: 240px;
+    height: 300px;
+    border: solid 5px #2f3847;
+}
+.barra-n{
+    background-color: #243340;
+    padding: 10%;
+}
+.titulo-n{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.subtitulos-n{
+    text-align: center;
+    font-size: 25px;
 }
 .container-responsive-p{
 width: 90%;

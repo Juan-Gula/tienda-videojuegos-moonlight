@@ -1,7 +1,9 @@
+/**Serpando el scss en varias partes**/
+
 .dias{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px 50px 50px 50px 50px;
+    grid-template-rows: 70px 70px 70px 70px 70px;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -10,20 +12,14 @@
 ul{
     list-style-type: none;
 }
-.flechas-izq{
-    width: 20px;
-    height: 20px;
-    display: flex;
+.año{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: $font-family;
+    letter-spacing: 3px;
 }
-.flechas-der{
-    width: 20px;
-    height: 20px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    rotate: 180deg;
-}
 .mes{
     border-top: solid 2px rgb(32, 32, 32);
     border-bottom: solid 2px rgb(32, 32, 32);
@@ -37,11 +33,6 @@ ul{
     .mes ul{
         margin: 0;
         padding: 0;
-        .mes ul li{
-            color: white;
-            font-size: 20px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
             .mes .anterior{
                 float: left;
                 padding-top: 10px;
@@ -52,7 +43,6 @@ ul{
             }
         }
     }
-}
 
 .meses{
     margin: 0;
@@ -68,7 +58,7 @@ ul{
 }
 
 .dias{
-    padding: 10px 0;
+    padding: 30px 0;
     background: rgb(34, 34, 34);
     margin: 0;
 
@@ -80,13 +70,13 @@ ul{
         margin-bottom: 5px;
         font-size:15px;
         color: whitesmoke;
-        display: grid;
-
-        .dias li .dia-hoy{
-            padding: 5px;
-            background: #185549;
-            color: white;
-        }
-        
+        display: grid; 
     }
+}
+.dia-hoy{
+    background-color: #185549;
+    padding: 5px;
+}
+.fecha-salida{
+    background-color: #185549;
 }
