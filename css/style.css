@@ -473,10 +473,10 @@ nav {
   height: 300px;
   width: 240px;
   margin: 10px;
-  transition: height 2s, width 2s;
+  transition: height 1s, width 1s;
   animation-name: imagen-animacion;
   animation-iteration-count: 1s;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 .img-c2 {
