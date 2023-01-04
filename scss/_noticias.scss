@@ -1,0 +1,76 @@
+
+.flex-container-n{
+    background-color: #243340;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 0;
+
+}
+
+.flex-container-n > div{
+    color: whitesmoke;
+}
+
+.caja-n{
+    width: 240px;
+    height: 300px;
+    margin: 10px;
+
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    text-justify: center;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 40px;
+    font-weight: 700;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 30px;
+}
+.evento-n{
+    width: 240px;
+    height: 300px;
+    border: solid 5px #2f3847;
+}
+.titulo-nuevo{
+    text-align: center;
+    font-family: $font-family;
+}
+.container-nuevo-n{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container-celu{
+    display: none;
+}
+.nuevo-n{
+    height: 151px;
+    width: 324px;
+    border: solid 2px rgb(32, 32, 32);
+}
+.fecha-salida-n{
+    background-color: #185549;
+    border: solid 2px rgb(32, 32, 32);
+}
+.barra-n{
+    background-color: #243340;
+    padding: 5%;
+}
+.titulo-n{
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: $font-family;
+}
+.subtitulos-n{
+    text-align: center;
+    font-size: 25px;
+    font-family: $font-family;
+}

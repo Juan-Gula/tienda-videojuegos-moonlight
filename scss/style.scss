@@ -8,6 +8,7 @@
 /*Variables*/
 $color-letras:color whitesmoke;
 $font-family: 'Montserrat', sans-serif;
+$borders:rgb(32, 32, 32);
 
 @import "_buttons"; 
 @import "_calendar";
@@ -85,9 +86,8 @@ nav{
     background-color: #2f3847;
     height: 300px;
     width: 240px;
-    border: 7px solid #2f3847;
+    border: 3px solid rgb(32, 32, 32);
     border-radius: 10px;
-    border-style: ridge;
     margin: 10px;
 }
 .Barra-p{
@@ -140,17 +140,55 @@ nav{
     height: 300px;
     border: solid 5px #2f3847;
 }
+.titulo-nuevo{
+    text-align: center;
+    font-family: $font-family;
+}
+.container-nuevo-n{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container-celu{
+    display: none;
+}
+.carousel-inner{
+    padding: 3%;
+}
+.carousel-item{
+    padding-left: 22%;
+}
+.carru{
+    padding: 10px;
+    justify-content: space-around;
+}
+.boton-n{
+    display: flex;
+    justify-content: center;
+}
+.nuevo-n{
+    height: 151px;
+    width: 324px;
+    border: solid 2px rgb(32, 32, 32);
+}
+.fecha-salida-n{
+    background-color: #185549;
+    border: solid 2px rgb(32, 32, 32);
+}
 .barra-n{
     background-color: #243340;
-    padding: 10%;
+    padding: 5%;
 }
 .titulo-n{
     text-align: center;
     padding-bottom: 20px;
+    font-family: $font-family;
 }
 .subtitulos-n{
     text-align: center;
     font-size: 25px;
+    font-family: $font-family;
 }
 .container-responsive-p{
 width: 90%;
@@ -293,10 +331,16 @@ grid-template-areas:
     display: flex;
     justify-content: space-around;
 }
+form{
+    background-image: url(../assets/img/background2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 .evento{
     margin: 10px;
     display: flex;
     text-align: center;
+    font-family: $font-family;
 }
 .precio{
     display: flex;
@@ -417,6 +461,13 @@ footer{
     align-items: center;
     justify-content: center;
     
+}
+.hiper{
+    text-decoration: none;
+    color: whitesmoke;
+    text-align: center;
+    justify-content: center;
+    right: 0;
 }
 /*Para pantallas más chicas: Semantica*/
 @media screen and (max-width:720px) {
@@ -657,15 +708,16 @@ footer{
         display: none;
     }
     .dropdown{
-        display: block;
+        
         display: flex;
+        align-items: flex-end;
         justify-items: right;
-        display: none;
     }
     .dropdown-item{
         display: flex;
         justify-content: center;
         text-align: center;
+        right: 0%;
     }
     h1{
         margin: 0;
@@ -683,4 +735,31 @@ footer{
     footer{
         height: 100px;
     }    
+}
+@media screen and (max-width:1630px) {
+    .calendario{
+        display: none;
+    }
+}
+@media screen and (max-width:1630px) {
+    .container-celu{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+}
+@media screen and (max-width:900px) {
+    .carru{
+        padding-left: 0%;
+    }
+    
+}
+@media screen and (max-width:690px) {
+    .carru{
+        width: 300px;
+        height: 200px;
+    }
+    
 }

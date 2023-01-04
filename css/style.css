@@ -42,6 +42,36 @@
   transform: translateY(-1px);
 }
 
+.button-n {
+  display: grid;
+  padding: 1.3em 3em;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2.5px;
+  font-weight: 800;
+  justify-content: center;
+  color: black;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button-n:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button-n:active {
+  transform: translateY(-1px);
+}
+
 /**Serpando el scss en varias partes**/
 .dias {
   display: grid;
@@ -123,6 +153,7 @@ ul {
 
 .fecha-salida {
   background-color: #185549;
+  border: solid 1px rgb(32, 32, 32);
 }
 
 .texto {
@@ -198,9 +229,8 @@ nav {
   background-color: #2f3847;
   height: 300px;
   width: 240px;
-  border: 7px solid #2f3847;
+  border: 3px solid rgb(32, 32, 32);
   border-radius: 10px;
-  border-style: ridge;
   margin: 10px;
 }
 
@@ -254,19 +284,66 @@ nav {
   border: solid 5px #2f3847;
 }
 
+.titulo-nuevo {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container-nuevo-n {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container-celu {
+  display: none;
+}
+
+.carousel-inner {
+  padding: 3%;
+}
+
+.carousel-item {
+  padding-left: 22%;
+}
+
+.carru {
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.boton-n {
+  display: flex;
+  justify-content: center;
+}
+
+.nuevo-n {
+  height: 151px;
+  width: 324px;
+  border: solid 2px rgb(32, 32, 32);
+}
+
+.fecha-salida-n {
+  background-color: #185549;
+  border: solid 2px rgb(32, 32, 32);
+}
+
 .barra-n {
   background-color: #243340;
-  padding: 10%;
+  padding: 5%;
 }
 
 .titulo-n {
   text-align: center;
   padding-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .subtitulos-n {
   text-align: center;
   font-size: 25px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container-responsive-p {
@@ -400,10 +477,17 @@ nav {
   justify-content: space-around;
 }
 
+form {
+  background-image: url(../assets/img/background2.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .evento {
   margin: 10px;
   display: flex;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 .precio {
@@ -523,6 +607,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hiper {
+  text-decoration: none;
+  color: whitesmoke;
+  text-align: center;
+  justify-content: center;
+  right: 0;
 }
 
 /*Para pantallas más chicas: Semantica*/
@@ -707,14 +799,15 @@ footer {
     display: none;
   }
   .dropdown {
-    display: block;
     display: flex;
+    align-items: flex-end;
     justify-items: right;
   }
   .dropdown-item {
     display: flex;
     justify-content: center;
     text-align: center;
+    right: 0%;
   }
   h1 {
     margin: 0;
@@ -730,6 +823,30 @@ footer {
 @media screen and (max-width: 392px) {
   footer {
     height: 100px;
+  }
+}
+@media screen and (max-width: 1630px) {
+  .calendario {
+    display: none;
+  }
+}
+@media screen and (max-width: 1630px) {
+  .container-celu {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 900px) {
+  .carru {
+    padding-left: 0%;
+  }
+}
+@media screen and (max-width: 690px) {
+  .carru {
+    width: 300px;
+    height: 200px;
   }
 }
 
